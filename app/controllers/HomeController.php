@@ -15,9 +15,9 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function showScore()
 	{
-		return View::make('hello');
+		return View::make('admin');
 	}
 
 	public function admin()
