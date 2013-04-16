@@ -5,7 +5,10 @@
 		<title>Älgåtipset</title>
 	</head>
 	<body>
-		<h2>Nuvarande ställning:</h2>
+		
+		<div class="container">
+			@yield('content')
+		</div>
 		
 	</body>
 </html>
