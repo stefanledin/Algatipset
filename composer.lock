@@ -615,12 +615,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "98df44b1a2f9e316c48495b2aa41db236a8fb0c2"
+                "reference": "6c1fcc518185bc533db44a3e8eceba055bb29705"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/98df44b1a2f9e316c48495b2aa41db236a8fb0c2",
-                "reference": "98df44b1a2f9e316c48495b2aa41db236a8fb0c2",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/6c1fcc518185bc533db44a3e8eceba055bb29705",
+                "reference": "6c1fcc518185bc533db44a3e8eceba055bb29705",
                 "shasum": ""
             },
             "require": {
@@ -711,7 +711,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2013-04-17 04:11:24"
+            "time": "2013-04-17 21:35:45"
         },
         {
             "name": "monolog/monolog",
@@ -1059,12 +1059,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "74049e36e2e73ca2ec069c9be86d01ba422d44ea"
+                "reference": "d12b9f735acc4c335d040ff042530c2ef82150f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/74049e36e2e73ca2ec069c9be86d01ba422d44ea",
-                "reference": "74049e36e2e73ca2ec069c9be86d01ba422d44ea",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/d12b9f735acc4c335d040ff042530c2ef82150f3",
+                "reference": "d12b9f735acc4c335d040ff042530c2ef82150f3",
                 "shasum": ""
             },
             "require": {
@@ -1100,7 +1100,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2013-04-13 14:06:01"
+            "time": "2013-04-17 05:37:48"
         },
         {
             "name": "symfony/css-selector",
@@ -1467,12 +1467,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel.git",
-                "reference": "e9050081ecadd64c2ed0b3cab653a1d802217593"
+                "reference": "fa372b69d5205e50027acb21c6058081bc74475a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/e9050081ecadd64c2ed0b3cab653a1d802217593",
-                "reference": "e9050081ecadd64c2ed0b3cab653a1d802217593",
+                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/fa372b69d5205e50027acb21c6058081bc74475a",
+                "reference": "fa372b69d5205e50027acb21c6058081bc74475a",
                 "shasum": ""
             },
             "require": {
@@ -1527,7 +1527,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
-            "time": "2013-04-12 15:56:02"
+            "time": "2013-04-17 05:42:22"
         },
         {
             "name": "symfony/process",
@@ -1641,12 +1641,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Translation.git",
-                "reference": "79a63e2829ea4e8295b4d44a55b08f20f0875a11"
+                "reference": "6ed1f8208520b7f97154883b1d49f5b7e07d179c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Translation/zipball/79a63e2829ea4e8295b4d44a55b08f20f0875a11",
-                "reference": "79a63e2829ea4e8295b4d44a55b08f20f0875a11",
+                "url": "https://api.github.com/repos/symfony/Translation/zipball/6ed1f8208520b7f97154883b1d49f5b7e07d179c",
+                "reference": "6ed1f8208520b7f97154883b1d49f5b7e07d179c",
                 "shasum": ""
             },
             "require": {
@@ -1687,28 +1687,71 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "http://symfony.com",
-            "time": "2013-04-11 06:50:46"
+            "time": "2013-04-13 14:46:29"
         }
     ],
     "packages-dev": [
+        {
+            "name": "mustache/mustache",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobthecow/mustache.php.git",
+                "reference": "v2.3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/v2.3.0",
+                "reference": "v2.3.0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mustache": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Justin Hileman",
+                    "email": "justin@justinhileman.info",
+                    "homepage": "http://justinhileman.com"
+                }
+            ],
+            "description": "A Mustache implementation in PHP.",
+            "homepage": "https://github.com/bobthecow/mustache.php",
+            "keywords": [
+                "mustache",
+                "templating"
+            ],
+            "time": "2013-04-02 03:56:30"
+        },
         {
             "name": "way/generators",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JeffreyWay/Laravel-4-Generators.git",
-                "reference": "0705da24f67f61c663abff2c9817ad78c4cfb850"
+                "reference": "439250836e25f64e3b3f825cb23c56024b0f7e07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JeffreyWay/Laravel-4-Generators/zipball/0705da24f67f61c663abff2c9817ad78c4cfb850",
-                "reference": "0705da24f67f61c663abff2c9817ad78c4cfb850",
+                "url": "https://api.github.com/repos/JeffreyWay/Laravel-4-Generators/zipball/439250836e25f64e3b3f825cb23c56024b0f7e07",
+                "reference": "439250836e25f64e3b3f825cb23c56024b0f7e07",
                 "shasum": ""
             },
             "require": {
                 "illuminate/console": "4.0.x",
                 "illuminate/filesystem": "4.0.x",
                 "illuminate/support": "4.0.x",
+                "mustache/mustache": "dev-master",
                 "php": ">=5.3.0"
             },
             "require-dev": {
@@ -1732,7 +1775,7 @@
                     "role": "Developer"
                 }
             ],
-            "time": "2013-04-16 22:07:15"
+            "time": "2013-04-17 18:52:19"
         }
     ],
     "aliases": [
