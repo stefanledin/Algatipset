@@ -1,7 +1,7 @@
 @extends('master')
 
 <h2>Lägg till tips</h2>
-{{ Form::open(array('url' => 'foo/bar')) }}
+{{ Form::open(array('route' => 'test')) }}
    <?php echo Form::label('name', 'Namn'); ?>
    <?php echo Form::text('name'); ?>
    <?php echo Form::label('phone', 'Telefonnummer'); ?>

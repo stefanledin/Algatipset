@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Whoops' => $vendorDir . '/filp/whoops/src',
+    'Way\\Generators' => $vendorDir . '/way/generators/src',
     'Symfony\\Component\\Translation\\' => $vendorDir . '/symfony/translation',
     'Symfony\\Component\\Routing\\' => $vendorDir . '/symfony/routing',
     'Symfony\\Component\\Process\\' => $vendorDir . '/symfony/process',
@@ -23,6 +24,7 @@ return array(
     'Psr\\Log\\' => $vendorDir . '/psr/log',
     'Predis' => $vendorDir . '/predis/predis/lib',
     'PHPParser' => $vendorDir . '/nikic/php-parser/lib',
+    'Mustache' => $vendorDir . '/mustache/mustache/src',
     'Monolog' => $vendorDir . '/monolog/monolog/src',
     'Illuminate' => $vendorDir . '/laravel/framework/src',
     'Doctrine\\DBAL\\' => $vendorDir . '/doctrine/dbal/lib',
