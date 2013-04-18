@@ -14,3 +14,9 @@
 Route::get('/', 'HomeController@showScore');
 
 Route::get('admin', 'HomeController@admin');
+
+Route::post('test', function ()
+{
+	$input = Input::all();
+	dd($input);
+});
