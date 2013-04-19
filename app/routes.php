@@ -15,8 +15,7 @@ Route::get('/', 'HomeController@showScore');
 
 Route::get('admin', 'HomeController@admin');
 
-Route::post('test', function ()
+Route::post('admin/login', function ()
 {
-	$input = Input::all();
-	dd($input);
+	
 });
