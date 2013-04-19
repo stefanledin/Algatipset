@@ -38,8 +38,10 @@ class ComposerAutoloaderInitb1f42f51d43cfcc85aa6b1269dbb03bd
 
         $loader->register(true);
 
-        require $vendorDir . '/ircmaxell/password-compat/lib/password.php';
+
+        require $vendorDir . '/patchwork/utf8/bootup.utf8.php';
         require $vendorDir . '/swiftmailer/swiftmailer/lib/swift_required.php';
+        require $vendorDir . '/ircmaxell/password-compat/lib/password.php';
         require $vendorDir . '/laravel/framework/src/Illuminate/Support/helpers.php';
 
         return $loader;
