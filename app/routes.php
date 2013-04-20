@@ -15,7 +15,21 @@ Route::get('/', 'HomeController@showScore');
 
 Route::get('admin', 'HomeController@admin');
 
-Route::post('admin/login', function ()
+Route::post('admin/login', array('before' => 'csrf|auth', function ()
 {
-	
+	$credentials = array(
+		'username' => Input::get('username'),
+		'password' => Input::get('password')
+	);
+	if (Auth::attempt($credentials)) {
+		return 'Du finns i databasen ' . Auth::user()->name;
+	} else {
+		return 'Du finns inte i databasen =(';
+	}
+}));
+
+Route::get('admin/logout', function ()
+{
+	Auth::logout();
+	return Redirect::to('/');
 });
