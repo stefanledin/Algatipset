@@ -15,7 +15,7 @@ Route::get('/', 'HomeController@showScore');
 
 Route::get('admin', 'HomeController@admin');
 
-Route::post('admin/login', array('before' => 'csrf|auth', function ()
+Route::post('admin/login', array('before' => 'csrf', function ()
 {
 	$credentials = array(
 		'username' => Input::get('username'),
