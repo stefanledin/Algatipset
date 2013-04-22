@@ -16,12 +16,31 @@
 
 @else
 
-<h2>Lägg till tips</h2>
 <a href="admin/logout">Logga ut</a>
-
-@endif
+<h2>Lägg till tips</h2>
 
 <h2>Facit</h2>
-/*
-Facit goes here... 
- */
+<table>
+	<tbody>
+		<tr>
+			<td><strong>Hemmalag</strong></td>
+			<td><strong>Bortalag</strong></td>
+			<td><strong>1</strong></td>
+			<td><strong>X</strong></td>
+			<td><strong>2</strong></td>
+		</tr>
+	{{ Form::open(array('url' => '/')) }}
+	@for ($i = 0; $i < count($games); $i++)
+		<tr>
+			<td>{{ $games[$i]['Hemmalag'] }}</td>
+			<td>{{ $games[$i]['Bortalag'] }}</td>
+			<td><?php echo Form::radio('', '1'); ?></td>
+			<td><?php echo Form::radio('', 'X'); ?></td>
+			<td><?php echo Form::radio('', '2'); ?></td>
+		</tr>
+	@endfor
+	{{ Form::close() }}
+	</tbody>
+</table>
+
+@endif
