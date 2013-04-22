@@ -21,8 +21,8 @@ Route::post('admin/login', array('before' => 'csrf', function ()
 		'username' => Input::get('username'),
 		'password' => Input::get('password')
 	);
-	if (Auth::attempt($credentials)) {
-		return 'Du finns i databasen ' . Auth::user()->name;
+	if (Auth::attempt($credentials, true)) {
+		return Redirect::to('/');
 	} else {
 		return 'Du finns inte i databasen =(';
 	}
