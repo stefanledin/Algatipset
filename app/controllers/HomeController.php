@@ -18,6 +18,7 @@ class HomeController extends BaseController {
 	public function showScore()
 	{
 		$row = DB::table('result')->first();
+		$row = unserialize($row->row);
 
 		$games = [
 			['Hemmalag' => 'Älgå SK', 'Bortalag' => 'IF Örnen'],
@@ -42,6 +43,15 @@ class HomeController extends BaseController {
 		return View::make('admin')
 			->with('games', $games)
 			->with('row', $row);
+	}
+
+	public function updateRow()
+	{
+		$data = serialize(Input::get('facit'));
+		$update = DB::update('update result set row = ? where id = 2', array($data));
+		if ($update) {
+			return Redirect::to('/');
+		}
 	}
 
 	public function admin()
