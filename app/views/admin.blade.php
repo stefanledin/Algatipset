@@ -28,19 +28,22 @@
 			<td><strong>1</strong></td>
 			<td><strong>X</strong></td>
 			<td><strong>2</strong></td>
+			<td><strong>-</strong></td>
 		</tr>
-	{{ Form::open(array('url' => '/')) }}
+	{{ Form::open(array('url' => 'saverow')) }}
 	@for ($i = 0; $i < count($games); $i++)
 		<tr>
 			<td>{{ $games[$i]['Hemmalag'] }}</td>
 			<td>{{ $games[$i]['Bortalag'] }}</td>
-			<td><?php echo Form::radio('', '1'); ?></td>
-			<td><?php echo Form::radio('', 'X'); ?></td>
-			<td><?php echo Form::radio('', '2'); ?></td>
+			<td><?php echo Form::radio('facit['.$i.']', '1', ($row[$i] == '1') ? true : false); ?></td>
+			<td><?php echo Form::radio('facit['.$i.']', 'X', ($row[$i] == 'X') ? true : false); ?></td>
+			<td><?php echo Form::radio('facit['.$i.']', '2', ($row[$i] == '2') ? true : false); ?></td>
+			<td><?php echo Form::radio('facit['.$i.']', '-', ($row[$i] == '-') ? true : false); ?></td>
 		</tr>
 	@endfor
-	{{ Form::close() }}
 	</tbody>
 </table>
+	<?php echo Form::submit('Spara'); ?>
+	{{ Form::close() }}
 
 @endif
