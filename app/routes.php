@@ -13,6 +13,8 @@
 
 Route::get('/', 'HomeController@showScore');
 
+Route::post('saverow', 'HomeController@updateRow');
+
 Route::get('admin', 'HomeController@admin');
 
 Route::post('admin/login', array('before' => 'csrf', function ()
