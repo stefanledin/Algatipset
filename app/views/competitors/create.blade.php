@@ -14,7 +14,6 @@
 					<td><strong>1</strong></td>
 					<td><strong>X</strong></td>
 					<td><strong>2</strong></td>
-					<td><strong>-</strong></td>
 				</tr>
 			@for ($i = 0; $i < count($games); $i++)
 				<tr>
