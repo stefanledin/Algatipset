@@ -5,7 +5,6 @@
 	echo Form::model($competitor, array('method' => 'PUT', 'url' => 'competitors/'.$competitor->id));
 		
 		echo Form::token();?>
-
 		<table>
 			<tbody>
 				<tr>
@@ -19,9 +18,9 @@
 				<tr>
 					<td>{{ $games[$i]['Hemmalag'] }}</td>
 					<td>{{ $games[$i]['Bortalag'] }}</td>
-					<td><?php echo Form::radio('row['.$i.']', '1'); ?></td>
-					<td><?php echo Form::radio('row['.$i.']', 'X'); ?></td>
-					<td><?php echo Form::radio('row['.$i.']', '2'); ?></td>
+					<td><?php echo Form::radio('row['.$i.']', '1', ($competitor->row[$i] == '1') ? true : false); ?></td>
+					<td><?php echo Form::radio('row['.$i.']', 'X', ($competitor->row[$i] == 'X') ? true : false); ?></td>
+					<td><?php echo Form::radio('row['.$i.']', '2', ($competitor->row[$i] == '2') ? true : false); ?></td>
 				</tr>
 			@endfor
 			</tbody>

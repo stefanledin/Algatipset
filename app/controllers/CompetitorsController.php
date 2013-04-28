@@ -67,6 +67,7 @@ class CompetitorsController extends BaseController {
     public function edit($id)
     {
         $competitor = Competitor::find($id);
+        $competitor->row = unserialize($competitor->row);
         return View::make('competitors.edit')
             ->with('competitor', $competitor)
             ->with('games', $this->games);
@@ -81,13 +82,13 @@ class CompetitorsController extends BaseController {
     public function update($id)
     {
         $competitor = Competitor::find($id);
-        $competitor->row = Input::get('row');
+        $competitor->row = serialize(Input::get('row'));
         $competitor->name = Input::get('name');
         $competitor->phone = Input::get('phone');
         $competitor->sponsoring = Input::get('sponsoring');
         $competitor->goals = Input::get('goals');
         $competitor->save();
-        return Redirect::to('competitors/'.$competitor->id);
+        return Redirect::to('competitors');
     }
 
     /**
