@@ -35,3 +35,5 @@ Route::get('admin/logout', function ()
 	Auth::logout();
 	return Redirect::to('/');
 });
+
+Route::resource('competitors', 'CompetitorsController');
