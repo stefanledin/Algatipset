@@ -1,6 +1,6 @@
 @extends('master')
 
-
+@section('content')
 @if (! Auth::check() )
 
 <h2>Logga in</h2>
@@ -47,3 +47,5 @@
 	{{ Form::close() }}
 
 @endif
+
+@stop
