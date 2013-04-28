@@ -3,6 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Älgåtipset</title>
+		<style type="text/css">
+			label, input {
+				display: block;
+			}
+		</style>
 	</head>
 	<body>
 		
