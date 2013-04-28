@@ -37,7 +37,7 @@ class CompetitorsController extends BaseController {
     public function store()
     {
         $competitor = new Competitor;
-        $competitor->row = Input::get('row');
+        $competitor->row = serialize(Input::get('row'));
         $competitor->name = Input::get('name');
         $competitor->phone = Input::get('phone');
         $competitor->sponsoring = Input::get('sponsoring');
