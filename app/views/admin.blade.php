@@ -17,7 +17,7 @@
 @else
 
 <a href="admin/logout">Logga ut</a>
-<h2>Lägg till tips</h2>
+<h2><a href="competitors">Lägg till tips</a></h2>
 
 <h2>Facit</h2>
 <table>
@@ -43,6 +43,8 @@
 	@endfor
 	</tbody>
 </table>
+	<?php echo Form::label('goals', 'Antal mål'); ?>
+	<?php echo Form::text('goals', $goals) ?>
 	<?php echo Form::submit('Spara'); ?>
 	{{ Form::close() }}
 

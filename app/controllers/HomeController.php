@@ -23,18 +23,21 @@ class HomeController extends BaseController {
 	public function showScore()
 	{
 		$row = DB::table('result')->first();
+		$goals = $row->goals;
 		$row = unserialize($row->row);
 
 		$games = $this->games;
 		return View::make('admin')
 			->with('games', $games)
+			->with('goals', $goals)
 			->with('row', $row);
 	}
 
 	public function updateRow()
 	{
 		$data = Input::get('facit');
-		$update = DB::update('update result set row = ? where id = 2', array( serialize($data)));
+		$goals = Input::get('goals');
+		$update = DB::update('update result set row = ?, goals = ? where id = 2', array( serialize($data), $goals) );
 		if ($update) {
 
 			$competitors = Competitor::all();
@@ -58,8 +61,8 @@ class HomeController extends BaseController {
 			
 			} //endforeach
 
-			return Redirect::to('/');
 		}
+		return Redirect::to('/');
 	}
 
 	public function updateScore()
